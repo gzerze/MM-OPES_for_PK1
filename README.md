@@ -1,5 +1,7 @@
 # MM-OPES_for_PK1
-#"Optimizing On-the-Fly Probability Enhanced Sampling for Complex RNA Systems: Sampling Free Energy Surfaces of an H-Type Pseudoknot":https://www.biorxiv.org/content/10.1101/2024.10.25.620366v1
+#"Optimizing On-the-Fly Probability Enhanced Sampling for Complex RNA Systems: Sampling Free Energy Surfaces of an H-Type Pseudoknot"
+
+Manuscript Link: https://www.biorxiv.org/content/10.1101/2024.10.25.620366v1
 
 
 # Repository Overview
@@ -35,6 +37,8 @@ mdp/: Contains the GROMACS .mdp files.
 
 Contains all PLUMED input files used in the simulations.
 File naming convention: plumed-CVs-temperature-range.dat.
+
+
 Coordinate and Topology Files
 
 pk1_deshaw_390_pr.gro: Coordinate file of the total system.
