@@ -19,16 +19,16 @@
 
 
 
-# Full path to application + application name
+#Full path to application + application name
 source "/home/username/PROGRAMS/plumed2-v2.8/sourceme.sh
 
 application="/home/username/PROGRAMS/gromacs-2021.4/exec/bin/gmx_gpu mdrun"
 
-# Define number of walkers
+#Define number of walkers
 ng=8
 
 
-# Define variables related to RNA and ff
+#Define variables related to RNA and ff
 proot="pk1"
 ff="deshaw"
 fileroot="${proot}_${ff}"
