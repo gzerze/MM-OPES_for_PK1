@@ -45,4 +45,8 @@ pk1_deshaw_390_pr.gro: Coordinate file of the total system.
 topol.top: GROMACS-compatible topology file of the total system.
 
 
+# Additional Information
+For a detailed explanation of the methods, results, and analysis, please refer to the manuscript linked above
+
+
 
