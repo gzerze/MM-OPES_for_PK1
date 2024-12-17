@@ -1,0 +1,44 @@
+#!/bin/csh -f 
+
+set pARRAY = ( pk1 )
+
+set j = 1
+while ( $j < 2 )
+
+set proot = "$pARRAY[$j]"
+
+echo $proot
+
+set ff = deshaw
+set s = 1
+set i = 0
+
+while ( $i < 8 ) 
+
+	set fileroot = "${proot}_${ff}"
+        echo $fileroot
+	set this = "opes"
+
+	if ( $s == 1 ) then 
+		set mdp = "mdp/trex_cont${i}.mdp"
+                echo $mdp
+                echo $fileroot
+		#set gro = "${i}.gro"
+		set gro = "${fileroot}_390_pr.gro" 
+	endif
+
+	# 32 rep
+	#
+	mkdir $i
+	gromacs-2021.4/exec/bin/gmx_gpu grompp -v -f $mdp \
+		-c $gro -maxwarn 1 \
+		-o ${i}/${fileroot}_${this}_nd.tpr \
+		-p topol.top
+
+	@ i++
+end
+
+rm \#*
+@ j++
+
+end
