@@ -1,0 +1,79 @@
+#!/usr/bin/env python
+
+import sys,os,math,random
+
+base_mdp = \
+"""
+;
+; langevin, initialize velocities
+;
+constraints         =  h-bonds
+integrator          =  md
+ld_seed = %8i
+dt                  =  0.002    ; ps !
+nsteps = 5000000000	; 100 ps
+
+;nstcomm		    =  10
+;nstcalcenergy	    =  1 #ask this to Pablo
+nstxout             =  500000
+nstxtcout           =  5000
+compressed-x-grps   =  RNA
+nstvout             =  0
+nstfout             =  0
+nstlog              =  5000
+nstenergy           =  5000
+
+nstlist             =  20
+ns_type             =  grid
+rlist                    = 1.0
+vdwtype              = cut-off
+rvdw                     = 1.0
+coulombtype              = pme
+rcoulomb                 = 1.0
+fourierspacing = 0.12
+pme_order = 4
+ewald_rtol = 1e-5
+tcoupl			=  v-rescale
+tc-grps             =  RNA Water_and_ions
+tau_t               =  1.0 1.0 
+ref_t               =  %8.3f %8.3f  
+; Energy monitoring
+energygrps          =  System
+; Pressure coupling is on
+pcoupl                  = Parrinello-Rahman         ; Pressure coupling on in NPT
+pcoupltype              = isotropic                 ; uniform scaling of box vectors
+tau_p                   = 2.0                       ; time constant, in ps
+ref_p                   = 1.0                       ; reference pressure, in bar
+compressibility     = 4.5e-5                ; isothermal compressibility of water, bar^-1
+"""
+
+ini_mdp = base_mdp + \
+"""gen_vel             =  yes
+gen_temp            =  %8.3f
+gen_seed            =  %8i
+"""
+
+cont_mdp = base_mdp + \
+"""gen_vel             =  no
+"""
+
+Tlist = [390, 390, 390, 390, 390, 390, 390, 390]
+
+
+NT = len(Tlist)
+
+mdp_dir = "mdp"
+
+if not os.path.exists(mdp_dir):
+	os.mkdir(mdp_dir)
+
+for i in range(NT):
+	T = Tlist[i]
+	outp = open("%s/trex_ini%i.mdp"%(mdp_dir,i),"w")
+	outp.write(ini_mdp%(random.randint(1,1000000),T,T,T,
+			random.randint(1,1000000)))
+	outp.close()
+	outp = open("%s/trex_cont%i.mdp"%(mdp_dir,i),"w")
+	outp.write(cont_mdp%(random.randint(1,1000000),T,T))
+	outp.close()
+
