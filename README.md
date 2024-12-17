@@ -3,19 +3,23 @@
 
 
 # Repository Overview
-This repository contains all the input files and simulation scripts necessary to reproduce the results presented in the manuscript.
+This repository contains all the input files and simulation scripts needed to reproduce the simulations of the paper.
 
 # Folder Structure
 Qstem1_Qstem2/
 
-Contains input files for simulations employing  $Q_{stem1}$ and $Q_{stem2}$ as distinct collective variables (CVs).
+
+Contains input files for simulations employing  $Q_{stem1}$ and $Q_{stem2}$ as two orthogonal collective variables (CVs).
 Simulations were performed over a temperature range of 300–480 K.
+
 Structure:
+
 mdp/: Contains the GROMACS .mdp files.
 0/, 1/, 2/, ..., 7/: These folders include the PLUMED input files (plumed files) and GROMACS .tpr files.
 
 
 Nhb1_Nhb2/
+
 
 Contains input files for simulations using $N_{HB1}$ and $N_{HB2}$ as two orthogonal CVs.
 Simulations were performed over a temperature range of 300–480 K.
@@ -25,7 +29,9 @@ Structure:
 mdp/: Contains the GROMACS .mdp files.
 0/, 1/, 2/, ..., 7/: These folders include the PLUMED input files (plumed files) and GROMACS .tpr files.
 
+
 plumed/
+
 
 Contains all PLUMED input files used in the simulations.
 File naming convention: plumed-CVs-temperature-range.dat.
@@ -33,11 +39,6 @@ Coordinate and Topology Files
 
 pk1_deshaw_390_pr.gro: Coordinate file of the total system.
 topol.top: GROMACS-compatible topology file of the total system.
-
-
-
-
-
 
 
 
