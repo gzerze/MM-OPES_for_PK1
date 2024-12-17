@@ -3,7 +3,7 @@
 
 # This repository contains all the input files and simulation scripts needed to reproduce the simulations of the paper. 
 
-# "Qstem1_Qstem2" contain input files blong to the simulation employing $Q_{stem1}$ and $Q_{stem2}$ as distinct collective variables (CVs), performed over a temperature range of 300–480 K. And "Nhb1_Nhb2" contain input files belong to the simulation employing $N_{HB1}$ and $N_{HB2}$ as two orthogonal CVs, performed over a temperature range of 300–480 K. In any folder there are one folder that contain mdp files "mdp". and 8 folder "0, 1, 2...,7" contain plumed and tpr files. 
+#"Qstem1_Qstem2" contain input files blong to the simulation employing $Q_{stem1}$ and $Q_{stem2}$ as distinct collective variables (CVs), performed over a temperature range of 300–480 K. And "Nhb1_Nhb2" contain input files belong to the simulation employing $N_{HB1}$ and $N_{HB2}$ as two orthogonal CVs, performed over a temperature range of 300–480 K. In any folder there are one folder that contain mdp files "mdp". and 8 folder "0, 1, 2...,7" contain plumed and tpr files. 
 
 # "plumed" contain all plumed input files for all simulations has been done, and name of the files are as follow. "plumed-CVs-temperature-range.dat"
 
