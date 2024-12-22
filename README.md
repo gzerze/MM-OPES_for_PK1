@@ -1,7 +1,7 @@
 # MM-OPES_for_PK1
 #"Optimizing On-the-Fly Probability Enhanced Sampling for Complex RNA Systems: Sampling Free Energy Surfaces of an H-Type Pseudoknot"
 
-Manuscript Link: https://www.biorxiv.org/content/10.1101/2024.10.25.620366v1
+Manuscript preprint: https://www.biorxiv.org/content/10.1101/2024.10.25.620366v1
 
 
 # Repository Overview
@@ -41,12 +41,12 @@ File naming convention: plumed-CVs-temperature-range.dat.
 
 Coordinate and Topology Files
 
-pk1_deshaw_390_pr.gro: Coordinate file of the total system.
-topol.top: GROMACS-compatible topology file of the total system.
+pk1_deshaw_390_pr.gro: Coordinate file of the system.
+topol.top: GROMACS-compatible topology file of the system.
 
 
 # Additional Information
-For a detailed explanation of the methods, results, and analysis, please refer to the manuscript linked above
+For a detailed explanation of the methods, results, and analysis, please refer to the manuscript.
 
 
 
